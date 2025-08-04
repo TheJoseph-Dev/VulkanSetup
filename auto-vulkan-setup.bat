@@ -26,7 +26,7 @@ if not exist vendor (
 :: ---- Download GLFW ----
 if not exist vendor\glfw (
     echo [Clone] Cloning GLFW...
-    git clone https://github.com/glfw/glfw vendor/glfw || (
+    git clone --depth 1 https://github.com/glfw/glfw vendor/glfw || (
         echo [Error] Failed to clone GLFW.
         exit /b 1
     )
@@ -35,7 +35,7 @@ if not exist vendor\glfw (
 :: ---- Download GLM ----
 if not exist vendor\glm (
     echo [Clone] Cloning GLM...
-    git clone https://github.com/g-truc/glm vendor/glm || (
+    git clone --depth 1 https://github.com/g-truc/glm vendor/glm || (
         echo [Error] Failed to clone GLM.
         exit /b 1
     )
